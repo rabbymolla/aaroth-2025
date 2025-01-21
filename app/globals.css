@@ -14,3 +14,20 @@
 body {
   background-color: #000000;
 }
+
+/* CSS Animation */
+.nav-scroll {
+  animation: slideDown 0.5s ease-in-out forwards;
+}
+
+/* Keyframes Definition */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

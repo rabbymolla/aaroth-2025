@@ -6,8 +6,10 @@
   --gray_color: #4d4d4d;
   --white_color: #ffffff;
   --black_color: #000000;
+  --black_opacity: rgba(0, 0, 0, 0.5);
   --white_smoke: #f1f1f1;
   --button_color: #17479e;
+  --button_opacity: rgba(23, 70, 158, 0.2);
   --red_color: #fc0202;
   --opacity_bg: rgba(23, 70, 158, 0.94);
 }

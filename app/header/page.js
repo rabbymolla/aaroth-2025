@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import CartIcon from "@/public/SVG/cart";
 import Logo from "@/public/SVG/Logo";
@@ -14,7 +14,6 @@ import NavNoScroll from "@/helper/NavNoScroll";
 const Header = () => {
   const [navShow, setNavShow] = useState(false);
   const [show, setShow] = useState(true);
-  const outsideClick = useRef(null);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -65,7 +64,6 @@ const Header = () => {
       }
     };
   }, []);
-
   return (
     <header
       className={`${

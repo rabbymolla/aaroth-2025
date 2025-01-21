@@ -4,11 +4,11 @@ import Link from "next/link";
 import InstagramIcon from "@/public/SVG/instagramIcon";
 import FacebookIcon from "@/public/SVG/facebook";
 import TwitterIcon from "@/public/SVG/twitterIcon";
-import YoutubeIcon from "@/public/SVG/YoutubeIcon";
 import LinkdinIcon from "@/public/SVG/linkdinIcon";
 import HeadPhonIcon from "@/public/SVG/headPhonIcon";
 import AppleButton from "@/public/SVG/appleButton";
 import GoogleButton from "@/public/SVG/googleButton";
+import YoutubeIcon from "@/public/SVG/YoutubeIcon";
 
 const socalMedia = [
   {

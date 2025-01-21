@@ -1,5 +1,3 @@
-"use client";
-
 const NavNoScroll = (disableScroll) => {
   if (typeof window !== "undefined") {
     const body = document.body;

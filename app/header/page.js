@@ -10,7 +10,6 @@ import Navbar from "../navbar/page";
 import { FaBars } from "react-icons/fa6";
 import { ImCross } from "react-icons/im";
 import NavNoScroll from "@/helper/NavNoScroll";
-import OutSideClick from "@/helper/OutSideClick";
 
 const Header = () => {
   const [navShow, setNavShow] = useState(false);
@@ -66,9 +65,7 @@ const Header = () => {
       }
     };
   }, []);
-  OutSideClick(outsideClick, () => {
-    setShow(false);
-  });
+
   return (
     <header
       className={`${
@@ -132,7 +129,6 @@ const Header = () => {
         </div>
 
         <div
-          ref={outsideClick}
           className={`${navShow ? "my-2 " : "mt-5 "} ${
             show
               ? "opacity-100 translate-x-0 visible "

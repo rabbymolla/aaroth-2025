@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "@/public/SVG/Logo";
 import Link from "next/link";
+import YoutubeIcon from "@/public/SVG/tubeIcon";
 import InstagramIcon from "@/public/SVG/instagramIcon";
 import FacebookIcon from "@/public/SVG/facebook";
 import TwitterIcon from "@/public/SVG/twitterIcon";
@@ -8,7 +9,6 @@ import LinkdinIcon from "@/public/SVG/linkdinIcon";
 import HeadPhonIcon from "@/public/SVG/headPhonIcon";
 import AppleButton from "@/public/SVG/appleButton";
 import GoogleButton from "@/public/SVG/googleButton";
-import YoutubeIcon from "@/public/SVG/YoutubeIcon";
 
 const socalMedia = [
   {

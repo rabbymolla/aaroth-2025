@@ -6,10 +6,30 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      gray_color: "var(--gray_color)",
+      white_color: "var(--white_color)",
+      black_color: "var(--black_color)",
+      white_smoke: "var(--white_smoke)",
+      button_color: "var(--button_color)",
+      red_color: "var(--red_color)",
+      opcity_color: "var(--opacity_bg)",
+      transparent: "transparent",
+    },
+    fontFamily: {
+      Roboto: ["var(--font-roboto)"],
+    },
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      screens: {
+        xs: "350px",
+        sm: "575px",
+        md: "768px",
+        lg: "992px",
+        xl: "1200px",
+        "2xl": "1600px",
+      },
+      container: {
+        center: true,
       },
     },
   },

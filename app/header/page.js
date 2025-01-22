@@ -67,8 +67,8 @@ const Header = () => {
   return (
     <header
       className={`${
-        navShow ? "nav-scroll fixed top-0 left-0 w-full  z-50" : ""
-      } bg-white_color shadow-md ${navShow ? "p-1" : "py-4 2xl:py-11"}`}
+        navShow ? "nav-scroll fixed top-0 left-0 w-full  z-50 shadow-md" : ""
+      } bg-white_color  ${navShow ? "p-1" : "py-4"}`}
     >
       <div className="container px-1 lg:px-0">
         <div className=" lg:flex lg:items-center lg:justify-between  lg:gap-x-4">
@@ -92,13 +92,13 @@ const Header = () => {
 
           <div className="w-full mt-4 lg:mt-0 lg:w-[80%] flex items-center justify-between gap-x-4">
             <div className="w-[55%] lg:w-[70%]">
-              <div className="relative bg-white_smoke shadow-md rounded-md">
+              <div className="relative bg-white_smoke shadow-sm rounded-md">
                 <input
                   type="text"
                   placeholder="Search here..."
-                  className="w-full bg-transparent py-3 lg:py-5 pl-3 lg:pl-7 pr-10  font-Roboto font-medium placeholder:text-gray_color placeholder:text-sm md:placeholder:text-base outline-none text-base md:text-lg text-black_color"
+                  className="w-full bg-transparent py-2 pl-3 lg:pl-7 pr-10 lg:pr-14  font-Roboto font-medium placeholder:text-gray_color placeholder:text-sm md:placeholder:text-base outline-none text-base md:text-lg text-black_color"
                 />
-                <div className="absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer">
+                <div className="absolute top-1/2 right-2 lg:right-7 -translate-y-1/2 cursor-pointer">
                   <SearchIcon />
                 </div>
               </div>
@@ -131,7 +131,7 @@ const Header = () => {
             show
               ? "opacity-100 translate-x-0 visible "
               : "opacity-0 translate-x-full invisible "
-          } fixed top-[115px] right-0 lg:static w-10/12 lg:w-full h-screen lg:h-auto bg-white_color lg:bg-transparent overflow-y-auto lg:overflow-auto transition-all duration-500 ease-in-out shadow-md lg:shadow-none z-20 `}
+          } fixed top-[80px] right-0 lg:static w-10/12 lg:w-full h-screen lg:h-auto bg-white_color lg:bg-transparent overflow-y-auto lg:overflow-auto transition-all duration-500 ease-in-out shadow-md lg:shadow-none z-20 `}
         >
           <Navbar />
         </div>

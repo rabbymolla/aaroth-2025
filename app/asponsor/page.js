@@ -38,12 +38,12 @@ const companyInfo = [
 
 const AsponsorBy = () => {
   return (
-    <footer className="py-11 xl:py-16">
+    <footer className="py-8 xl:py-10">
       <div className="container">
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
           {companyInfo.map((data, i) => (
             <div key={i}>
-              <h3 className="text-sm xl:text-lg font-Roboto font-semibold mb-5 lg:mb-7 text-white_color">
+              <h3 className="text-sm xl:text-lg font-Roboto font-semibold mb-5 lg:mb-7 text-black_color">
                 {data.titlle}
               </h3>
               <div className="flex justify-start items-center gap-4 mb-9 last:mb-0 xl:mb-0">

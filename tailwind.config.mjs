@@ -14,9 +14,10 @@ export default {
       black_opacity: "var(--black_opacity)",
       white_smoke: "var(--white_smoke)",
       button_color: "var(--button_color)",
+      border_color: "var(--border_color)",
       button_opacity: "var(--button_opacity)",
       red_color: "var(--red_color)",
-      opcity_color: "var(--opacity_bg)",
+      opacity_bg: "var(--opacity_bg)",
       transparent: "transparent",
     },
     fontFamily: {

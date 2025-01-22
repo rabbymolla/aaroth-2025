@@ -1,7 +1,11 @@
 import "./globals.css";
+import "slick-carousel/slick/slick.css";
+//import "slick-carousel/slick/slick-theme.css";
 import { Roboto } from "next/font/google";
 import Header from "@/app/header/page";
 import Footer from "./footer/page";
+import AsponsorBy from "@/app/asponsor/page";
+import CopyRight from "./copyRight/page";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -21,6 +25,8 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <AsponsorBy />
+        <CopyRight />
       </body>
     </html>
   );

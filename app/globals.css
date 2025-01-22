@@ -4,6 +4,7 @@
 
 :root {
   --gray_color: #4d4d4d;
+  --shade_color: #5c5c5c;
   --white_color: #ffffff;
   --black_color: #000000;
   --black_opacity: rgba(0, 0, 0, 0.5);

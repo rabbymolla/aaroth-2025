@@ -104,7 +104,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="slider-container group relative py-5">
+    <div className="slider-container group relative md:py-5">
       <Slider {...settings}>
         {sliderImg.map((data) => (
           <div className="slider-item px-2 " key={data.id}>

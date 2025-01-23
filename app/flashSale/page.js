@@ -6,7 +6,7 @@ import FlashSlider from "@/components/flashItems/flashSlider";
 
 const FlashSale = () => {
   return (
-    <div className="pt-5 lg:pt-12">
+    <div className="lg:pt-12">
       <div className="lg:container ">
         <div className="relative">
           <div className="w-full h-[200px] sm:h-[337px] bg-border_color lg:rounded-[30px] ">

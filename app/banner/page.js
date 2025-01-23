@@ -36,7 +36,7 @@ const Banner = () => {
     className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "60px",
+    centerPadding: "50px",
     autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -60,8 +60,8 @@ const Banner = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true,
-          centerPadding: "80px", // Adjust padding for tablets
+          dots: false,
+          centerPadding: "30px", // Adjust padding for tablets
         },
       },
       {
@@ -70,7 +70,7 @@ const Banner = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
-          centerPadding: "30px", // Adjust padding for small screens
+          centerPadding: "20px", // Adjust padding for small screens
         },
       },
     ],
@@ -104,17 +104,21 @@ const Banner = () => {
   };
 
   return (
-    <div className="slider-container group relative md:py-5">
+    <div className="slider-container group relative py-5 md:py-10">
       <Slider {...settings}>
         {sliderImg.map((data) => (
-          <div className="slider-item px-2 " key={data.id}>
+          <div className="slider-item px-2 flex justify-center" key={data.id}>
             <Link href="#">
-              <Image
-                src={data.img || slider1}
-                alt={data.alt || "Banner Image"}
-                priority={false}
-                placeholder="blur"
-              />
+              <div className="overflow-hidden w-auto h-auto">
+                <Image
+                  src={data.img || slider1}
+                  alt={data.alt || "Banner Image"}
+                  priority={false}
+                  placeholder="blur"
+                  width={1620} // Matches container width
+                  height={634} // Matches image aspect ratio
+                />
+              </div>
             </Link>
           </div>
         ))}

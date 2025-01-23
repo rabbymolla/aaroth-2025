@@ -74,6 +74,15 @@ const PikariItems = () => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
+        breakpoint: 1400, // Large screens
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
         breakpoint: 1199, // Large screens
         settings: {
           slidesToShow: 3,
@@ -85,7 +94,7 @@ const PikariItems = () => {
       {
         breakpoint: 1024, // Large screens
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -160,32 +169,30 @@ const PikariItems = () => {
 
         <Slider {...settings}>
           {sliderImg.map((data) => (
-            <div key={data.id} className="bg-transparent px-2 ">
-              {/* Outer container with padding for gaps */}
-              <Link
-                href="#"
-                className="flex items-center justify-between gap-x-2 bg-white_color rounded-lg shadow-md py-2 px-2 sm:px-3 "
-              >
+            <div key={data.id} className="px-2">
+              <div className="flex items-center gap-x-2 bg-white_color rounded-lg shadow-md py-2 px-2 sm:px-3 ">
                 {/* Inner content */}
-                <div>
-                  <Image
-                    src={data.img || flash1}
-                    alt={data.alt || "Flash Image"}
-                    width={117}
-                    height={139}
-                    priority={false}
-                    placeholder="blur"
-                  />
-                </div>
+                <Link href={data.link || "/pikatItrms"}>
+                  <div className=" w-[117px] h-[139px] rounded-lg overflow-hidden ">
+                    <Image
+                      src={data.img || flash1}
+                      alt={data.alt || "Product Image"}
+                      width={117}
+                      height={139}
+                      priority={false}
+                      placeholder="blur"
+                    />
+                  </div>
+                </Link>
                 <div>
                   <h1 className="text-lg sm:text-sm md:text-lg font-Roboto font-medium text-black_color mb-2 2xl:mb-5">
                     {data.title || "This product title"}
                   </h1>
                   <p className="text-gray_color font-Roboto font-bold text-base sm:text-lg ">
-                    {data.price}
+                    {data.price || "$100"}
                   </p>
                 </div>
-              </Link>
+              </div>
             </div>
           ))}
         </Slider>

@@ -76,15 +76,23 @@ const Categories = () => {
       {
         breakpoint: 1199, // Large screens
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 5,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 768, // Tablets
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 574, // Mobile screens
+        settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          dots: false,
         },
       },
       {
@@ -123,27 +131,27 @@ const Categories = () => {
         <Slider {...settings}>
           {sliderImg.map((item) => (
             <div key={item.id} className="px-2 ">
-              <Link
+              <div
                 href={item.limk || "/categories"}
-                className="block bg-white_color shadow-md rounded-t-full  w-auto h-auto"
+                className="block shadow-md rounded-t-full h-auto w-auto overflow-hidden "
               >
                 <div>
                   <Image
                     src={item.img}
                     alt={item.title || "Product Image"}
-                    width={117}
-                    height={139}
+                    width={200}
+                    height={190}
                     priority={false}
                     placeholder="blur"
                     className="w-full h-auto"
                   />
                 </div>
-              </Link>
+              </div>
               <div className="mt-4 text-center">
-                <h2 className="text-lg font-medium text-black_color mb-2">
+                <h2 className="font-Roboto text-lg font-medium text-black_color mb-2">
                   {item.title || "No title available"}
                 </h2>
-                <p className="text-gray_color font-bold text-base">
+                <p className="text-gray_color font-Roboto font-bold text-base">
                   {item.price}
                 </p>
               </div>

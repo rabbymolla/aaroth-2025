@@ -118,7 +118,7 @@ const Categories = () => {
         </h1>
         <p className="font-Roboto font-normal text-sm text-gray_color mb-6 text-center md:text-start md:w-[394px] leading-7">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-          asperiores nemo architecto optio vitae. Fugiat.
+          asperiores nemo architecto optio vitae.
         </p>
         <Slider {...settings}>
           {sliderImg.map((item) => (

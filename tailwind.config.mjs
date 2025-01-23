@@ -8,6 +8,7 @@ export default {
   theme: {
     colors: {
       gray_color: "var(--gray_color)",
+      light_gray_color: "var(--light_gray_color)",
       shade_color: "var(--shade_color)",
       white_color: "var(--white_color)",
       black_color: "var(--black_color)",

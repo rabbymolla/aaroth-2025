@@ -69,7 +69,7 @@ const Banner = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true,
+          dots: false,
           centerPadding: "30px", // Adjust padding for small screens
         },
       },

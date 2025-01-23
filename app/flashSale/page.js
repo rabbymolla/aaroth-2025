@@ -22,7 +22,7 @@ const FlashSale = () => {
                 <div className="col-span-7">
                   {/* to check go to the flshItems of components file */}
                   <FlashSlider />
-                  <button className="w-full text-end font-Roboto font-bold text-white_color text-base ">
+                  <button className="w-full text-end font-Roboto font-bold text-white_color text-base  cursor-pointer z-10">
                     view more
                   </button>
                 </div>

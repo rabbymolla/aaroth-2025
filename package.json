@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "next": "15.1.5",
+    "rc-progress": "^4.0.0",
     "react": "^19.0.0",
     "react-countdown-circle-timer": "^3.2.1",
     "react-dom": "^19.0.0",

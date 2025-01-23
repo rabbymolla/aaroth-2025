@@ -5,6 +5,7 @@ import flash1 from "@/public/PNG/flash1.png";
 import flash2 from "@/public/PNG/flash2.png";
 import Image from "next/image";
 import Link from "next/link";
+import { Line } from "rc-progress";
 
 const sliderImg = [
   {
@@ -12,24 +13,28 @@ const sliderImg = [
     img: flash1,
     title: "Fitness and activity tracker",
     price: "$400",
+    stock: "60",
   },
   {
     id: 2,
     img: flash2,
     title: "Fitness and activity tracker",
     price: "$200",
+    stock: "50",
   },
   {
     id: 3,
     img: flash1,
     title: "Fitness and activity tracker",
     price: "$300",
+    stock: "20",
   },
   {
     id: 4,
     img: flash2,
     title: "Fitness and activity tracker",
     price: "$500",
+    stock: "100",
   },
 ];
 
@@ -121,19 +126,28 @@ const FlashSlider = () => {
               {/* Inner content */}
               <div>
                 <Image
-                  src={data.img}
+                  src={data.img || flash1}
                   alt={data.alt || "Flash Image"}
                   priority={false}
                   placeholder="blur"
                 />
               </div>
               <div>
-                <h1 className="text-xs md:text-lg font-Roboto font-medium text-black_color mb-5">
-                  {data.title}
+                <h1 className="text-xs sm:text-sm md:text-lg font-Roboto font-medium text-black_color mb-2 lg:mb-5">
+                  {data.title || "This product title"}
                 </h1>
-                <p className="text-gray_color font-Roboto font-bold text-base sm:text-lg">
+                <p className="text-gray_color font-Roboto font-bold text-base sm:text-lg flex items-center justify-between mb-2  md:mb-3">
                   {data.price}
+                  <span className="font-Roboto font-normal text-xs md:text-base text-border_color">
+                    {data.stock || "50"} left
+                  </span>
                 </p>
+                <Line
+                  percent={data.stock || 50}
+                  trailWidth={5}
+                  strokeWidth={5}
+                  strokeColor="#17479E"
+                />
               </div>
             </Link>
           </div>

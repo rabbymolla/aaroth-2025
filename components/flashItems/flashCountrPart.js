@@ -48,10 +48,10 @@ const FlashCounterPart = () => {
       <div className="flex flex-wrap sm:flex-nowrap gap-y-10 sm:gap-y-0 w-full sm:w-auto items-center justify-center gap-x-10 lg:gap-x-20">
         <CountdownCircleTimer
           {...timerProps}
-          colors="#17479e"
+          colors="#000"
           size={20}
-          trailColor="transparent"
-          strokeWidth={1}
+          //trailColor="transparent"
+          strokeWidth={0}
           duration={daysDuration}
           initialRemainingTime={remainingTime}
         >
@@ -67,7 +67,7 @@ const FlashCounterPart = () => {
           colors="#17479e"
           trailColor="transparent"
           size={20}
-          strokeWidth={1}
+          strokeWidth={0}
           duration={daySeconds}
           initialRemainingTime={remainingTime % daySeconds}
           onComplete={(totalElapsedTime) => ({
@@ -86,7 +86,7 @@ const FlashCounterPart = () => {
           colors="#17479e"
           trailColor="transparent"
           size={20}
-          strokeWidth={1}
+          strokeWidth={0}
           duration={hourSeconds}
           initialRemainingTime={remainingTime % hourSeconds}
           onComplete={(totalElapsedTime) => ({
@@ -105,7 +105,7 @@ const FlashCounterPart = () => {
           colors="#17479e"
           trailColor="transparent"
           size={20}
-          strokeWidth={1}
+          strokeWidth={0}
           duration={minuteSeconds}
           initialRemainingTime={remainingTime % minuteSeconds}
           onComplete={(totalElapsedTime) => ({

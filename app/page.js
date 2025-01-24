@@ -1,4 +1,5 @@
 import Banner from "./banner/page";
+import BuisnessPartner from "./business_partner/page";
 import Categories from "./categories/page";
 import ClientTestimonials from "./client_testimonials/page";
 import FlashSale from "./flashSale/page";
@@ -20,6 +21,7 @@ export default function Home() {
       <MoreSales />
       <ServicesPart />
       <ClientTestimonials />
+      <BuisnessPartner />
     </>
   );
 }

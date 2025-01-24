@@ -131,7 +131,7 @@ const Categories = () => {
         <Slider {...settings}>
           {sliderImg.map((item) => (
             <div key={item.id} className="px-2 ">
-              <div
+              <Link
                 href={item.limk || "/categories"}
                 className="block shadow-md rounded-t-full h-auto w-auto overflow-hidden "
               >
@@ -146,7 +146,7 @@ const Categories = () => {
                     className="w-full h-auto"
                   />
                 </div>
-              </div>
+              </Link>
               <div className="mt-4 text-center">
                 <h2 className="font-Roboto text-lg font-medium text-black_color mb-2">
                   {item.title || "No title available"}

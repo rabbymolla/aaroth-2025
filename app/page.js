@@ -1,5 +1,6 @@
 import Banner from "./banner/page";
 import Categories from "./categories/page";
+import ClientTestimonials from "./client_testimonials/page";
 import FlashSale from "./flashSale/page";
 import MoreSales from "./more_sales/page";
 import PikariItems from "./pikarItems/page";
@@ -16,6 +17,7 @@ export default function Home() {
       <SelectPikar />
       <PikariItems />
       <MoreSales />
+      <ClientTestimonials />
     </>
   );
 }

@@ -74,7 +74,7 @@ const MoreSales = () => {
   const settings = {
     dots: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,

@@ -161,7 +161,7 @@ const PikariItems = () => {
     ),
   };
   return (
-    <div className="pb-10 lg:pb-20 relative">
+    <div className="pt-10 pb-10 lg:pb-20 relative">
       <div className="container">
         <h1 className="font-Roboto font-bold text-lg xl:text-2xl text-black_color mb-5 lg:mb-10">
           Most Popular Paikar items

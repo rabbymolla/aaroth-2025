@@ -4,6 +4,7 @@ import Categories from "./categories/page";
 import ClientTestimonials from "./client_testimonials/page";
 import FlashSale from "./flashSale/page";
 import MoreSales from "./more_sales/page";
+import NewArrivals from "./new_arrivals/page";
 import PikariItems from "./pikarItems/page";
 import RecentlySale from "./recentlySale/page";
 import SelectPikar from "./selectPikar/page";
@@ -17,6 +18,7 @@ export default function Home() {
       <RecentlySale />
       <Categories />
       <SelectPikar />
+      <NewArrivals />
       <PikariItems />
       <MoreSales />
       <ServicesPart />

@@ -33,10 +33,8 @@ const sliderImg = [
 const Banner = () => {
   const [active, setActive] = useState("");
   const settings = {
-    className: "center",
-    centerMode: true,
+    centerMode: false,
     infinite: true,
-    centerPadding: "50px",
     autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -46,13 +44,27 @@ const Banner = () => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
+        breakpoint: 1400, // Large screens
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          centerPadding: "60px",
+          className: "center",
+          centerMode: true,
+        },
+      },
+      {
         breakpoint: 1024, // Large screens
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-          centerPadding: "40px", // Keep the same padding for large screens
+          centerPadding: "40px",
+          className: "center",
+          centerMode: true,
         },
       },
       {
@@ -61,7 +73,9 @@ const Banner = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
-          centerPadding: "30px", // Adjust padding for tablets
+          centerPadding: "30px",
+          className: "center",
+          centerMode: true,
         },
       },
       {
@@ -70,7 +84,9 @@ const Banner = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
-          centerPadding: "20px", // Adjust padding for small screens
+          centerPadding: "20px",
+          className: "center",
+          centerMode: true,
         },
       },
     ],

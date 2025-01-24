@@ -137,7 +137,7 @@ const FlashSlider = () => {
                   {data.title || "This product title"}
                 </h1>
                 <p className="text-gray_color font-Roboto font-bold text-base sm:text-lg flex items-center justify-between mb-2  md:mb-3">
-                  {data.price}
+                  {data.price || "$100"}
                   <span className="font-Roboto font-normal text-xs md:text-base text-border_color">
                     {data.stock || "50"} left
                   </span>

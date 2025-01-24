@@ -86,7 +86,7 @@ const SelectPikar = () => {
                   {data.title || "Product Title"}
                 </h2>
                 <p className="text-gray_color font-Roboto font-bold text-sm md:text-base">
-                  {data.price}
+                  {data.price || "$100"}
                 </p>
               </div>
             </div>

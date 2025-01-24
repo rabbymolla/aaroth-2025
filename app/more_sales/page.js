@@ -82,23 +82,30 @@ const MoreSales = () => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1199, // Large screens
+        breakpoint: 1200, // Large screens
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768, // Tablets
+        breakpoint: 1000, // Large screens
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 574, // Mobile screens
+        breakpoint: 768, // Tablets
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 574, // Mobile screens
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
         },
@@ -106,7 +113,7 @@ const MoreSales = () => {
       {
         breakpoint: 480, // Mobile screens
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -134,50 +141,52 @@ const MoreSales = () => {
         </h1>
         <Slider {...settings}>
           {sliderImg.map((item) => (
-            <div key={item.id} className="px-2 lg:px-5 shadow-md">
-              <Link
-                href={item.limk || "/more_sales"}
-                className="block rounded-2xl h-auto w-auto overflow-hidden "
-              >
-                <div className="relative ">
-                  <Image
-                    src={item.img}
-                    alt={item.title || "Product Image"}
-                    width={272}
-                    height={265}
-                    priority={false}
-                    placeholder="blur"
-                    className="w-full h-auto"
+            <div key={item.id} className="px-1">
+              <div className="shadow-md bg-white_color p-4 border border-border_color rounded-md">
+                <Link
+                  href={item.limk || "/more_sales"}
+                  className="block rounded-2xl h-auto w-auto overflow-hidden "
+                >
+                  <div className="relative ">
+                    <Image
+                      src={item.img}
+                      alt={item.title || "Product Image"}
+                      width={272}
+                      height={265}
+                      priority={false}
+                      placeholder="blur"
+                      className="w-full h-auto"
+                    />
+
+                    <span className="absolute top-3 right-3 bg-button_color text-white_color font-Roboto font-bold tex-xs p-2 rounded-md uppercase">
+                      {item.order || "sale"}
+                    </span>
+                  </div>
+                </Link>
+                <div className="pt-4 text-center">
+                  <h2 className="font-Roboto text-lg font-bold text-black_color mb-2">
+                    {item.title || "No title available"}
+                  </h2>
+                  <p className="text-gray_color font-Roboto font-bold text-base mb-3 flex items-center gap-x-4 justify-around">
+                    <span className="line-through text-red_color font-Roboto font-medium text-lg">
+                      {item.price || "$200"}
+                    </span>
+                    {item.price || "$100"}
+                  </p>
+                  <Line
+                    percent={item.stock || 50}
+                    trailWidth={5}
+                    strokeWidth={5}
+                    strokeColor="#17479E"
                   />
-
-                  <span className="absolute top-3 right-3 bg-button_color text-white_color font-Roboto font-bold tex-xs p-2 rounded-md uppercase">
-                    {item.order || "sale"}
+                  <span className="block font-Roboto font-normal text-xs md:text-base text-border_color mt-4">
+                    {item.stock || "50"} left
                   </span>
+
+                  <button className="w-full border border-button_color border-solid rounded-md shadow-sm py-2 cursor-pointer mt-5 text-button_color text-lg font-Roboto font-semibold">
+                    Add Cart
+                  </button>
                 </div>
-              </Link>
-              <div className="py-4 text-center">
-                <h2 className="font-Roboto text-lg font-bold text-black_color mb-2">
-                  {item.title || "No title available"}
-                </h2>
-                <p className="text-gray_color font-Roboto font-bold text-base mb-3 flex items-center gap-x-4 justify-around">
-                  <span className="line-through text-red_color font-Roboto font-medium text-lg">
-                    {item.price || "$200"}
-                  </span>
-                  {item.price || "$100"}
-                </p>
-                <Line
-                  percent={item.stock || 50}
-                  trailWidth={5}
-                  strokeWidth={5}
-                  strokeColor="#17479E"
-                />
-                <span className="block font-Roboto font-normal text-xs md:text-base text-border_color mt-4">
-                  {item.stock || "50"} left
-                </span>
-
-                <button className="w-full border border-button_color border-solid rounded-md shadow-sm py-2 cursor-pointer mt-5 text-button_color text-lg font-Roboto font-semibold">
-                  Add Cart
-                </button>
               </div>
             </div>
           ))}

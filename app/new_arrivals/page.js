@@ -145,10 +145,10 @@ const NewArrivals = () => {
 
                     <div className="p-4">
                       <h1 className="font-Roboto font-bold text-lg text-black_color">
-                        {item.title}
+                        {item.title || "product title"}
                       </h1>
                       <span className="font-Roboto font-normal text-sm text-gray_color">
-                        {item.waight} sold
+                        {item.waight || "2.3 m"} sold
                       </span>
                     </div>
                   </div>

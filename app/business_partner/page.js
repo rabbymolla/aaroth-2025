@@ -91,7 +91,7 @@ const BuisnessPartner = () => {
   };
 
   return (
-    <div className="py-5">
+    <div className="pt-5 pb-10  lg:pb-20">
       <div className="container ">
         <h1 className="font-Roboto font-bold text-lg xl:text-2xl text-black_color mb-5 lg:mb-10">
           Our Business Partners

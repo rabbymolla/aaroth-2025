@@ -6,6 +6,7 @@ import MoreSales from "./more_sales/page";
 import PikariItems from "./pikarItems/page";
 import RecentlySale from "./recentlySale/page";
 import SelectPikar from "./selectPikar/page";
+import ServicesPart from "./services/page";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <SelectPikar />
       <PikariItems />
       <MoreSales />
+      <ServicesPart />
       <ClientTestimonials />
     </>
   );

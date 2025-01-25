@@ -115,7 +115,7 @@ const HolSalesItems = () => {
             <div key={item.id} className="px-1">
               <div className="shadow-md bg-white_color rounded-3xl">
                 <Link
-                  href={item.limk || "/more_sales"}
+                  href={item.limk || "/holsale_items"}
                   className="block rounded-2xl h-auto w-auto overflow-hidden "
                 >
                   <div>

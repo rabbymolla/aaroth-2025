@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import blog1 from "@/public/PNG/blog1.png";
 import deafultImg from "@/public/PNG/blog1.png";
 import blog2 from "@/public/PNG/blog2.png";
@@ -45,10 +45,39 @@ const sliderImg = [
   },
 ];
 const BlogPart = () => {
-  const [visibleCount, setVisibleCount] = useState(4); // Start with 4 items
+  const [visibleCount, setVisibleCount] = useState(4); // Default for larger screens
+  const [incrementCount, setIncrementCount] = useState(4); // Default increment
+
+  // Adjust visible items based on screen size
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      if (window.innerWidth <= 767) {
+        // Small screens (e.g., mobile)
+        setVisibleCount(2);
+        setIncrementCount(2);
+      } else if (window.innerWidth <= 990) {
+        // Medium screens (e.g., tablets)
+        setVisibleCount(3);
+        setIncrementCount(3);
+      } else {
+        // Extra large screens (e.g., desktops)
+        setVisibleCount(4);
+        setIncrementCount(4);
+      }
+    };
+
+    // Run on initial render
+    updateVisibleCount();
+
+    // Add event listener for resizing
+    window.addEventListener("resize", updateVisibleCount);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("resize", updateVisibleCount);
+  }, []);
 
   const loadMore = () => {
-    setVisibleCount((prev) => prev + 4); // Load 4 more items
+    setVisibleCount((prev) => prev + incrementCount);
   };
   return (
     <div className="pt-5 pb-14">

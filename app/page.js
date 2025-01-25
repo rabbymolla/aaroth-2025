@@ -4,6 +4,7 @@ import BuisnessPartner from "./business_partner/page";
 import Categories from "./categories/page";
 import ClientTestimonials from "./client_testimonials/page";
 import FlashSale from "./flashSale/page";
+import HolSalesItems from "./holsale_items/page";
 import MoreSales from "./more_sales/page";
 import NewArrivals from "./new_arrivals/page";
 import NewsLetters from "./news_letters/page";
@@ -21,6 +22,7 @@ export default function Home() {
       <Categories />
       <SelectPikar />
       <NewArrivals />
+      <HolSalesItems />
       <PikariItems />
       <MoreSales />
       <BlogPart />

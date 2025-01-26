@@ -5,6 +5,7 @@ import deafultImg from "@/public/PNG/blog1.png";
 import blog2 from "@/public/PNG/blog2.png";
 import Image from "next/image";
 import Link from "next/link";
+import Hadding from "@/components/hadding/Hadding";
 
 const sliderImg = [
   {
@@ -82,9 +83,7 @@ const BlogPart = () => {
   return (
     <div className="pt-5 pb-14">
       <div className="container">
-        <h1 className="font-Roboto font-bold text-lg xl:text-2xl text-black_color mb-5 lg:mb-10">
-          News Blogs
-        </h1>
+        <Hadding title="News Blogs" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-7">
           {sliderImg.slice(0, visibleCount).map((item) => (
             <div key={item.id}>

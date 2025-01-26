@@ -1,12 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import flash1 from "@/public/PNG/flash1.png";
 import flash2 from "@/public/PNG/flash2.png";
 import Slider from "react-slick";
 import Link from "next/link";
 import Image from "next/image";
-import SampleNextArrow from "@/components/recentlySliderArrow/SampleNextArrow";
-import SamplePrevArrow from "@/components/recentlySliderArrow/SamplePrevArrow";
+import NextArrow from "@/components/SliderArrows/nextArrow";
+import PrevArrow from "@/components/SliderArrows/prevArrow";
+import Hadding from "@/components/hadding/Hadding";
 
 const sliderImg = [
   {
@@ -61,6 +62,7 @@ const sliderImg = [
 ];
 const RecentlySale = () => {
   const [active, setActive] = useState("");
+  const clickRef = useRef(null);
 
   const settings = {
     dots: false,
@@ -69,9 +71,8 @@ const RecentlySale = () => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
+    arrows: false,
 
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1400, // Large screens
@@ -161,13 +162,21 @@ const RecentlySale = () => {
     ),
   };
   return (
-    <div className="py-10 lg:py-20 relative">
-      <div className="container">
-        <h1 className="font-Roboto font-bold text-lg xl:text-2xl text-black_color mb-5 lg:mb-10">
-          Recently view
-        </h1>
+    <div className="py-10 lg:py-20 ">
+      <div className="container ">
+        <div className="relative">
+          <Hadding title="Recently view" />
+          <PrevArrow
+            clickRef={clickRef}
+            className="absolute top-1/2 right-14  -translate-y-1/2  p-2 cursor-pointer text-gray_color hover:text-button_color duration-100 ease-linear "
+          />
+          <NextArrow
+            clickRef={clickRef}
+            className="absolute top-1/2 right-0  -translate-y-1/2  z-10 p-2 cursor-pointer text-gray_color hover:text-button_color duration-100 ease-linear"
+          />
+        </div>
 
-        <Slider {...settings}>
+        <Slider ref={clickRef} {...settings}>
           {sliderImg.map((data) => (
             <div key={data.id} className="px-2">
               <div className="flex items-center gap-x-2 bg-white_color rounded-lg shadow-md py-2 px-2 sm:px-3 ">

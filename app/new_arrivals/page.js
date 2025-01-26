@@ -8,6 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import NextArrow from "@/components/SliderArrows/nextArrow";
 import PrevArrow from "@/components/SliderArrows/prevArrow";
+import Hadding from "@/components/hadding/Hadding";
 
 const sliderImg = [
   {
@@ -103,9 +104,10 @@ const NewArrivals = () => {
       <div className="container">
         <div className="flex items-center gap-x-4">
           <div className="w-[30%] md:w-1/5">
-            <h1 className="font-Roboto font-bold text-lg xl:text-2xl text-black_color mb-5 w-[168px] xl:leading-10">
-              New Arrivales Products
-            </h1>
+            <Hadding
+              title="New Arrivales Products"
+              className="text-sm sm:text-base lg:text-2xl"
+            />
 
             {/* arrows area for slider arrows */}
             <div className="flex items-center gap-x-4">

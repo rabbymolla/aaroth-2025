@@ -1,12 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import flash1 from "@/public/PNG/cat1.png";
 import flash2 from "@/public/PNG/cat2.png";
 import Slider from "react-slick";
 import Link from "next/link";
 import Image from "next/image";
-import SampleNextArrow from "@/components/catSliderArrow/SampleNextArrow";
-import SamplePrevArrow from "@/components/catSliderArrow/SamplePrevArrow";
+import PrevArrow from "@/components/SliderArrows/prevArrow";
+import NextArrow from "@/components/SliderArrows/nextArrow";
+import Hadding from "@/components/hadding/Hadding";
 
 const sliderImg = [
   {
@@ -62,6 +63,7 @@ const sliderImg = [
 
 const Categories = () => {
   const [active, setActive] = useState(0);
+  const clickRef = useRef(null);
 
   const settings = {
     dots: false,
@@ -70,8 +72,7 @@ const Categories = () => {
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1199, // Large screens
@@ -119,16 +120,24 @@ const Categories = () => {
   };
 
   return (
-    <div className="py-10 lg:py-20 bg-light_gray_color relative">
+    <div className="py-10 lg:py-20 bg-light_gray_color">
       <div className="container">
-        <h1 className="font-Roboto font-bold text-xl lg:text-2xl text-black_color mb-3">
-          Categories
-        </h1>
+        <div className="relative">
+          <Hadding title="Categories" />
+          <PrevArrow
+            clickRef={clickRef}
+            className="absolute top-1/2 right-14  -translate-y-1/2  rounded-full z-10 p-2 cursor-pointer text-gray_color hover:text-white_color  duration-100 ease-linear border border-border_color hover:bg-button_color"
+          />
+          <NextArrow
+            clickRef={clickRef}
+            className="absolute top-1/2 right-0  -translate-y-1/2  rounded-full z-10 p-2 cursor-pointer text-gray_color hover:text-white_color  duration-100 ease-linear border border-border_color hover:bg-button_color"
+          />
+        </div>
         <p className="font-Roboto font-normal text-sm text-gray_color mb-6 text-center md:text-start md:w-[394px] leading-7">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
           asperiores nemo architecto optio vitae.
         </p>
-        <Slider {...settings}>
+        <Slider ref={clickRef} {...settings}>
           {sliderImg.map((item) => (
             <div key={item.id} className="px-2 ">
               <Link

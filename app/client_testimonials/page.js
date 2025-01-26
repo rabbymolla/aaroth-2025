@@ -7,6 +7,7 @@ import { Line } from "rc-progress";
 import TestiIcon from "@/public/SVG/testi1";
 import TestimProfiile1 from "@/public/SVG/testimProfiile1";
 import defaultProfile from "@/public/PNG/testiDefaultProfile1.jpg";
+import Hadding from "@/components/hadding/Hadding";
 
 const sliderImg = [
   {
@@ -118,9 +119,7 @@ const ClientTestimonials = () => {
   return (
     <div className="py-10 lg:py-20">
       <div className="container">
-        <h1 className="font-Roboto font-bold text-xl lg:text-2xl text-black_color mb-3 text-center md:text-start">
-          Client Testimonials
-        </h1>
+        <Hadding title="Client Testimonials" />
         <p className="font-Roboto font-normal text-sm text-gray_color mb-10 text-center md:text-start md:w-[394px] leading-7">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
           asperiores nemo architecto optio vitae.

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import slider1 from "@/public/PNG/slider1.png";
@@ -8,8 +8,8 @@ import slider3 from "@/public/PNG/slider3.jpg";
 import slider4 from "@/public/PNG/slider4.jpg";
 import slider5 from "@/public/PNG/slider5.jpg";
 import Link from "next/link";
-import SampleNextArrow from "@/components/bannerSliderArrow/SampleNextArrow";
-import SamplePrevArrow from "@/components/bannerSliderArrow/SamplePrevArrow";
+import PrevArrow from "@/components/SliderArrows/prevArrow";
+import NextArrow from "@/components/SliderArrows/nextArrow";
 
 const sliderImg = [
   {
@@ -32,6 +32,8 @@ const sliderImg = [
 
 const Banner = () => {
   const [active, setActive] = useState("");
+  const clickRef = useRef(null);
+
   const settings = {
     centerMode: false,
     infinite: true,
@@ -40,8 +42,8 @@ const Banner = () => {
     slidesToScroll: 1,
     speed: 500,
     dots: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    arrows: false,
+
     responsive: [
       {
         breakpoint: 1400, // Large screens
@@ -121,7 +123,7 @@ const Banner = () => {
 
   return (
     <div className="slider-container group relative py-5 md:py-10">
-      <Slider {...settings}>
+      <Slider ref={clickRef} {...settings}>
         {sliderImg.map((data) => (
           <div className="slider-item px-2 flex justify-center" key={data.id}>
             <Link href="#">
@@ -139,6 +141,14 @@ const Banner = () => {
           </div>
         ))}
       </Slider>
+      <PrevArrow
+        clickRef={clickRef}
+        className="absolute top-1/2 left-0 md:left-2 -translate-y-1/2 bg-gray_color rounded-full z-10 p-2 cursor-pointer text-white_color opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      />
+      <NextArrow
+        clickRef={clickRef}
+        className="absolute top-1/2 right-0 md:right-2 -translate-y-1/2 bg-gray_color rounded-full p-2 cursor-pointer z-10 text-white_color opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      />
     </div>
   );
 };

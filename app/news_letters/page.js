@@ -1,3 +1,4 @@
+import Hadding from "@/components/hadding/Hadding";
 import NewsLetter from "@/public/SVG/newsLetter";
 import React from "react";
 
@@ -8,13 +9,12 @@ const NewsLetters = () => {
         <div className="grid grid-cols-1 gap-y-7 md:grid-cols-2 gap-x-4 md:items-center">
           {/* Left Content */}
           <div className="flex items-start gap-x-8">
+            {/* svg icon */}
             <div>
               <NewsLetter />
             </div>
             <div>
-              <h1 className="font-Roboto font-bold text-lg lg:text-2xl text-white_color mb-5">
-                Sign Up for Newsletter
-              </h1>
+              <Hadding title="Sign Up for Newsletter" />
               <p className="font-Roboto font-normal text-xs md:text-base text-white_color leading-7">
                 Stay updated with our latest news and offers. Subscribe to our
                 newsletter for regular updates and insights.

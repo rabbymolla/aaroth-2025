@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import flash1 from "@/public/PNG/flash1.png";
 import flash2 from "@/public/PNG/flash2.png";
+import Hadding from "@/components/hadding/Hadding";
 
 const sliderImg = [
   {
@@ -60,9 +61,7 @@ const SelectPikar = () => {
   return (
     <div className="py-10 lg:py-20 ">
       <div className="container">
-        <h1 className="font-Roboto font-bold text-lg xl:text-2xl text-black_color mb-5 lg:mb-10">
-          Our Selected Pikar
-        </h1>
+        <Hadding title="Our Selected Pikar" />
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-2 md:gap-x-5 gap-y-5 xl:gap-y-10">
           {sliderImg.map((data) => (
             <div

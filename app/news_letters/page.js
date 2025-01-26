@@ -14,7 +14,10 @@ const NewsLetters = () => {
               <NewsLetter />
             </div>
             <div>
-              <Hadding title="Sign Up for Newsletter" />
+              <Hadding
+                title="Sign Up for Newsletter"
+                className="text-white_color txet-2xl  mb-5"
+              />
               <p className="font-Roboto font-normal text-xs md:text-base text-white_color leading-7">
                 Stay updated with our latest news and offers. Subscribe to our
                 newsletter for regular updates and insights.

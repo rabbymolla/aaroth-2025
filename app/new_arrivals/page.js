@@ -106,7 +106,7 @@ const NewArrivals = () => {
           <div className="w-[30%] md:w-1/5">
             <Hadding
               title="New Arrivales Products"
-              className="text-sm sm:text-base lg:text-2xl"
+              className="text-sm sm:text-base lg:text-2xl mb-5"
             />
 
             {/* arrows area for slider arrows */}

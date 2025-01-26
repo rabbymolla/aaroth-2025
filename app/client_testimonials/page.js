@@ -119,8 +119,8 @@ const ClientTestimonials = () => {
   return (
     <div className="py-10 lg:py-20">
       <div className="container">
-        <Hadding title="Client Testimonials" />
-        <p className="font-Roboto font-normal text-sm text-gray_color mb-10 text-center md:text-start md:w-[394px] leading-7">
+        <Hadding title="Client Testimonials" className="text-2xl mb-5" />
+        <p className="font-Roboto font-normal text-sm text-gray_color mb-10 md:w-[394px] leading-7">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
           asperiores nemo architecto optio vitae.
         </p>

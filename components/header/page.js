@@ -116,7 +116,7 @@ const Header = () => {
                 </span>
               </div>
 
-              <div className="flex items-center gap-x-3 bg-button_color p-1  xl:py-3 xl:px-5 2xl:px-8 2xl:py-5 shadow-md rounded-md xl:rounded-xl 2xl:rounded-2xl cursor-pointer">
+              <div className="flex items-center gap-x-3 bg-button_color p-1  xl:py-2 xl:px-5 2xl:px-8 2xl:py-5 shadow-md rounded-sm xl:rounded-xl 2xl:rounded-2xl cursor-pointer">
                 <UserIcon />
                 <button className="hidden xl:block font-Roboto font-bold text-white_color text-xs 2xl:text-lg uppercase">
                   My Account

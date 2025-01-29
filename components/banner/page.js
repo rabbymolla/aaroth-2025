@@ -46,18 +46,6 @@ const Banner = () => {
 
     responsive: [
       {
-        breakpoint: 1400, // Large screens
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-          centerPadding: "60px",
-          className: "center",
-          centerMode: true,
-        },
-      },
-      {
         breakpoint: 1024, // Large screens
         settings: {
           slidesToShow: 1,
